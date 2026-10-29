@@ -113,7 +113,7 @@
 <body>
 <main class="card">
   <header>
-    <div class="avatar" id="avatar" aria-hidden="true">TG<img src="avatar.jpg" alt="" onerror="this.remove()" /></div>
+    <div class="avatar" aria-hidden="true"><span id="initiales">TG</span><img src="avatar.jpg" alt="" onerror="this.remove()" /></div>
     <h1 id="nom"></h1>
     <p class="org" id="org"></p>
     <p class="tag" id="adresse"></p>
@@ -434,7 +434,7 @@ function downloadVcard() {
    ============================================================ */
 (function () {
   var c = CARTE;
-  document.getElementById("avatar").textContent = (c.prenom[0] || "") + (c.nom[0] || "");
+  document.getElementById("initiales").textContent = (c.prenom[0] || "") + (c.nom[0] || "");
   document.getElementById("nom").textContent = c.prenom + " " + c.nom;
   document.getElementById("org").textContent = c.organisation;
   document.getElementById("adresse").textContent = c.adresse ? c.adresse + " · " + c.codePostal + " " + c.ville : "";
